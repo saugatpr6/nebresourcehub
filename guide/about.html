@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - NEB Resource Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --primary-dark: #0d47a1;
+      --text: #2c3e50;
+      --light-bg: #f8f9fa;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background-color: white;
+      line-height: 1.6;
+    }
+    
+    .navbar {
+      background-color: white;
+      box-shadow: var(--shadow);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .logo i {
+      font-size: 1.8rem;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .section-title {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: var(--primary);
+      border-radius: 2px;
+    }
+    
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .contact-section {
+      margin-top: 3rem;
+      background-color: var(--light-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      background-color: white;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .social-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    footer {
+      background-color: var(--primary-dark);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .social-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <i class="fas fa-book-open"></i>
+      NEB Resource Hub
+    </a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>NEB Resource Hub</h1>
+      <p>Empowering NEB students with quality resources and guidance</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="about-section">
+      <h2 class="section-title">About Us</h2>
+      <p class="about-text">
+        Welcome to NEB Resource Hub! We're dedicated to providing helpful resources and guidance for NEB students in Nepal. Our mission is to make quality educational content accessible to all students, helping them excel in their academic journey.
+      </p>
+      
+      <div class="contact-section">
+        <h3 class="section-title">Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@_saugat" target="_blank" class="social-btn">
+            <i class="fab fa-youtube"></i> Visit Our YouTube Channel
+
+          <a href="mailto:webpr6@gmail.com" target="_blank" class="social-btn">
+            <i class="fas fa-envelope"></i> Email Us
+          </a>
+          <a href="https://facebook.com/saugat.gadtaula.14" target="_blank" class="social-btn">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+          <a href="https://instagram.com/saugatgadtaula1" target="_blank" class="social-btn">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NEB Resource Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>

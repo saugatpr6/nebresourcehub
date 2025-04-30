@@ -1,0 +1,149 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #007BFF;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.navbar h1 {
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  background: #f7f9fc;
+  padding: 2rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid #e6e6e6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+header .container h1 {
+  font-size: 2.5rem;
+  color: #0056b3;
+  margin-bottom: 0.5rem;
+}
+
+header .container p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.chapters h2 {
+  display: grid;
+  font-size: 2rem;
+  color: #007BFF;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 1s ease-out;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.chapter-card {
+  display: block;
+  background: #f0f8ff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #0056b3;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-card:active {
+  transform: translateY(2px);
+}
+
+/* Footer */
+footer {
+  background: #f0f0f0;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1rem;
+  color: #666;
+  border-top: 2px solid #e6e6e6;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .container h1 {
+    font-size: 2rem;
+  }
+
+  header .container p {
+    font-size: 1rem;
+  }
+
+  .chapter-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .chapter-card {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
